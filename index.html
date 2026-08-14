@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Personal Portfolio of Anisha Gupta - College Student & Aspiring Game Developer. Turning ideas into playable experiences.">
+  <meta name="keywords"
+    content="Anisha Gupta, Game Developer, Portfolio, Game Dev, Programming, Python, C++, Web Development">
+  <meta name="author" content="Anisha Gupta">
+  <title>Anisha Gupta | Aspiring Game Developer</title>
+
+  <!-- External Stylesheets & Fonts -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+  <!-- Background Particle Grid Canvas -->
+  <canvas id="particle-canvas"></canvas>
+
+  <!-- ==========================================================================
+       2. NAVIGATION BAR
+       ========================================================================== -->
+  <nav class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="#home" class="nav-logo">
+        ANISHA<span class="logo-slash"></span> <span class="logo-tag">Gupta</span>
+      </a>
+
+      <!-- Desktop & Mobile Navigation Links -->
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#home" class="nav-link active">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#gamedev" class="nav-link">Game Dev</a></li>
+        <li><a href="#goals" class="nav-link">Goals</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+
+      <!-- Mobile Hamburger Toggle -->
+      <button class="mobile-nav-toggle" id="nav-toggle" aria-label="Toggle Navigation Menu">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ==========================================================================
+       3. HERO SECTION
+       ========================================================================== -->
+  <section class="hero-section" id="home">
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <!-- Status Badge -->
+        <div class="hero-badge">
+          <span class="status-dot"></span>
+          <span>GAME DEV MODE: ON</span>
+        </div>
+
+        <div class="hero-subtitle">
+          Hi, I'm Anisha Gupta <span class="accent-purple">🎮</span>
+        </div>
+
+        <h1 class="hero-title">Aspiring Game Developer</h1>
+
+        <h2 class="hero-headline">"Turning ideas into playable experiences."</h2>
+
+        <p class="hero-intro">
+          I’m a technology student passionate about programming, creativity and game development. I enjoy learning how
+          code and design come together to create interactive experiences, and I’m building my skills through practical
+          projects.
+        </p>
+
+        <div class="hero-buttons">
+          <a href="#projects" class="btn btn-primary">
+            <i class="fas fa-gamepad"></i> View My Projects
+          </a>
+          <a href="#contact" class="btn btn-secondary">
+            <i class="fas fa-paper-plane"></i> Let's Connect
+          </a>
+        </div>
+      </div>
+
+      <!-- Hero Visual / Illustration -->
+      <div class="hero-visual">
+        <div class="hero-img-wrapper">
+          <img src="assets/hero-illustration.png" alt="Anisha Gupta Game Dev Concept Illustration" class="hero-img">
+
+          <!-- Floating Interactive Badges -->
+          <div class="floating-badge badge-top-left">
+            <i class="fas fa-code accent-purple"></i> Logic & Physics
+          </div>
+          <div class="floating-badge badge-bottom-right">
+            <i class="fas fa-dice-d20 accent-blue"></i> Interactive Worlds
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       4. ABOUT ME SECTION
+       ========================================================================== -->
+  <section class="section" id="about">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag"><i class="fas fa-user-astronaut"></i> Player Profile</span>
+        <h2 class="section-title">About Me</h2>
+        <p class="section-subtitle">Blending code and creativity to design interactive digital worlds.</p>
+      </div>
+
+      <div class="about-grid">
+        <div class="glass-card about-content-card">
+          <p class="about-text">
+            I am a technology student with a strong interest in Game Development. I enjoy programming, problem-solving
+            and experimenting with new technologies. My goal is to combine technical skills with creativity to build
+            games and interactive experiences.
+          </p>
+
+          <h3 class="about-focus-title">Developing My Skills Through:</h3>
+          <ul class="about-focus-list">
+            <li class="about-focus-item"><i class="fas fa-terminal accent-purple"></i> Programming & Logic</li>
+            <li class="about-focus-item"><i class="fas fa-university accent-blue"></i> College Projects</li>
+            <li class="about-focus-item"><i class="fas fa-laptop-code accent-purple"></i> Personal Projects</li>
+            <li class="about-focus-item"><i class="fas fa-cubes accent-blue"></i> Game-Development Experiments</li>
+            <li class="about-focus-item"><i class="fas fa-microchip accent-purple"></i> Learning New Technologies</li>
+          </ul>
+
+          <div class="about-quote-box">
+            <i class="fas fa-unlock-alt"></i>
+            <span>"Every project is another level unlocked."</span>
+          </div>
+        </div>
+
+        <div class="about-stats-grid">
+          <div class="glass-card stat-card">
+            <div class="stat-icon"><i class="fas fa-code"></i></div>
+            <div class="stat-number">4+</div>
+            <div class="stat-label">Languages Learning</div>
+          </div>
+
+          <div class="glass-card stat-card">
+            <div class="stat-icon"><i class="fas fa-gamepad"></i></div>
+            <div class="stat-number">100%</div>
+            <div class="stat-label">Game Dev Passion</div>
+          </div>
+
+          <div class="glass-card stat-card">
+            <div class="stat-icon"><i class="fas fa-project-diagram"></i></div>
+            <div class="stat-number">LEVEL 02</div>
+            <div class="stat-label">Current Quest</div>
+          </div>
+
+          <div class="glass-card stat-card">
+            <div class="stat-icon"><i class="fas fa-rocket"></i></div>
+            <div class="stat-number">∞</div>
+            <div class="stat-label">Ideas Building</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       5. SKILLS SECTION
+       ========================================================================== -->
+  <section class="section" id="skills">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag"><i class="fas fa-bolt"></i> Skill Loadout</span>
+        <h2 class="section-title">My Tech & Dev Skills</h2>
+        <p class="section-subtitle">Core programming, tools, and foundations I am currently learning and developing.</p>
+      </div>
+
+      <div class="skills-grid">
+        <!-- Programming -->
+        <div class="glass-card skill-category-card">
+          <div class="category-header">
+            <i class="fas fa-code category-icon"></i>
+            <h3 class="category-title">Programming</h3>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag"><i class="fab fa-python"></i> Python</span>
+            <span class="skill-tag"><i class="fas fa-c"></i> C</span>
+            <span class="skill-tag"><i class="fas fa-code"></i> C++</span>
+            <span class="skill-tag"><i class="fab fa-js"></i> JavaScript</span>
+          </div>
+        </div>
+
+        <!-- Web Development -->
+        <div class="glass-card skill-category-card">
+          <div class="category-header">
+            <i class="fas fa-globe category-icon"></i>
+            <h3 class="category-title">Web Development</h3>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag"><i class="fab fa-html5"></i> HTML</span>
+            <span class="skill-tag"><i class="fab fa-css3-alt"></i> CSS</span>
+            <span class="skill-tag"><i class="fab fa-js"></i> JavaScript</span>
+          </div>
+        </div>
+
+        <!-- Tools -->
+        <div class="glass-card skill-category-card">
+          <div class="category-header">
+            <i class="fas fa-tools category-icon"></i>
+            <h3 class="category-title">Tools</h3>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag"><i class="fas fa-laptop-code"></i> VS Code</span>
+            <span class="skill-tag"><i class="fab fa-git-alt"></i> Git</span>
+            <span class="skill-tag"><i class="fab fa-github"></i> GitHub</span>
+            <span class="skill-tag"><i class="fab fa-linux"></i> Linux</span>
+          </div>
+        </div>
+
+        <!-- Other Skills -->
+        <div class="glass-card skill-category-card">
+          <div class="category-header">
+            <i class="fas fa-brain category-icon"></i>
+            <h3 class="category-title">Other Skills</h3>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag"><i class="fas fa-puzzle-piece"></i> Problem Solving</span>
+            <span class="skill-tag"><i class="fas fa-sitemap"></i> Programming Logic</span>
+            <span class="skill-tag"><i class="fas fa-layer-group"></i> Basic Data Structures</span>
+            <span class="skill-tag"><i class="fas fa-gamepad"></i> Game Dev Fundamentals</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="learning-badge-note">
+        <i class="fas fa-info-circle accent-blue"></i>
+        <span>Continuously learning, refining, and expanding these capabilities through daily practice.</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       6. PROJECTS SECTION
+       ========================================================================== -->
+  <section class="section" id="projects">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag"><i class="fas fa-folder-open"></i> Inventory</span>
+        <h2 class="section-title">Featured Projects</h2>
+        <p class="section-subtitle">Practical applications and game prototypes created to test code logic and design.
+        </p>
+      </div>
+
+      <div class="projects-grid">
+        <!-- Project 1: Snake Game -->
+        <div class="glass-card project-card">
+          <div class="project-header">
+            <div class="project-icon-badge">🎮</div>
+            <span class="project-status status-active">Playable Demo</span>
+          </div>
+          <div class="project-body">
+            <h3 class="project-title">Snake Game</h3>
+            <p class="project-desc">
+              A classic Snake Game created to explore programming logic, movement, collision detection and player
+              interaction. This project helped me understand how programming concepts can be transformed into an
+              interactive game.
+            </p>
+            <div class="project-tech-stack">
+              <span class="tech-pill">JavaScript</span>
+              <span class="tech-pill">HTML5 Canvas</span>
+              <span class="tech-pill">CSS3</span>
+            </div>
+          </div>
+          <div class="project-footer">
+            <a href="YOUR_GITHUB_SNAKE_LINK" target="_blank" rel="noopener" class="btn btn-outline btn-sm">
+              <i class="fab fa-github"></i> GitHub
+            </a>
+            <button class="btn btn-primary btn-sm" data-modal="snake-modal">
+              <i class="fas fa-play"></i> Play Demo
+            </button>
+          </div>
+        </div>
+
+        <!-- Project 2: QR Code Generator -->
+        <div class="glass-card project-card">
+          <div class="project-header">
+            <div class="project-icon-badge">📱</div>
+            <span class="project-status status-active">Interactive Tool</span>
+          </div>
+          <div class="project-body">
+            <h3 class="project-title">QR Code Generator</h3>
+            <p class="project-desc">
+              A practical project that generates QR codes from user-provided information. This project helped me
+              practice programming logic and create a useful real-world application.
+            </p>
+            <div class="project-tech-stack">
+              <span class="tech-pill">JavaScript</span>
+              <span class="tech-pill">HTML5</span>
+              <span class="tech-pill">CSS3</span>
+              <span class="tech-pill">QR API</span>
+            </div>
+          </div>
+          <div class="project-footer">
+            <a href="YOUR_GITHUB_QR_LINK" target="_blank" rel="noopener" class="btn btn-outline btn-sm">
+              <i class="fab fa-github"></i> GitHub
+            </a>
+            <button class="btn btn-primary btn-sm" data-modal="qr-modal">
+              <i class="fas fa-external-link-alt"></i> Live Demo
+            </button>
+          </div>
+        </div>
+
+        <!-- Project 3: Future Game Project -->
+        <div class="glass-card project-card">
+          <div class="project-header">
+            <div class="project-icon-badge">🚀</div>
+            <span class="project-status status-coming">COMING SOON 🎮</span>
+          </div>
+          <div class="project-body">
+            <h3 class="project-title">My Next Game</h3>
+            <p class="project-desc">
+              An upcoming personal game-development project where I plan to experiment with game mechanics, design and
+              interactive gameplay.
+            </p>
+            <div class="project-tech-stack">
+              <span class="tech-pill">Unity / C#</span>
+              <span class="tech-pill">Game Physics</span>
+              <span class="tech-pill">2D Mechanics</span>
+            </div>
+          </div>
+          <div class="project-footer">
+            <button class="btn btn-outline btn-sm" disabled style="opacity: 0.6; cursor: not-allowed; width: 100%;">
+              <i class="fas fa-hourglass-half"></i> In Development
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       7. GAME DEVELOPMENT SECTION
+       ========================================================================== -->
+  <section class="section" id="gamedev">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag"><i class="fas fa-ghost"></i> Core Focus</span>
+        <h2 class="section-title">My Passion for Game Development</h2>
+        <p class="section-subtitle">Why game development inspires me to write code and design interactive experiences.
+        </p>
+      </div>
+
+      <div class="gamedev-hero-box">
+        <p class="gamedev-intro-text">
+          "Game development interests me because it combines programming, creativity, storytelling and problem-solving.
+          I want to learn how ideas can become interactive worlds that players can explore and enjoy."
+        </p>
+      </div>
+
+      <!-- Interactive Focus Cards -->
+      <div class="gamedev-grid">
+        <div class="glass-card gamedev-card">
+          <div class="gamedev-card-icon">🎮</div>
+          <div class="gamedev-card-title">Game Programming</div>
+        </div>
+        <div class="glass-card gamedev-card">
+          <div class="gamedev-card-icon">🕹️</div>
+          <div class="gamedev-card-title">Game Mechanics</div>
+        </div>
+        <div class="glass-card gamedev-card">
+          <div class="gamedev-card-icon">🎨</div>
+          <div class="gamedev-card-title">Game Design</div>
+        </div>
+        <div class="glass-card gamedev-card">
+          <div class="gamedev-card-icon">🌎</div>
+          <div class="gamedev-card-title">2D & 3D Games</div>
+        </div>
+        <div class="glass-card gamedev-card">
+          <div class="gamedev-card-icon">⚙️</div>
+          <div class="gamedev-card-title">Game Physics</div>
+        </div>
+        <div class="glass-card gamedev-card">
+          <div class="gamedev-card-icon">🧠</div>
+          <div class="gamedev-card-title">Gameplay Logic</div>
+        </div>
+        <div class="glass-card gamedev-card">
+          <div class="gamedev-card-icon">📖</div>
+          <div class="gamedev-card-title">Interactive Storytelling</div>
+        </div>
+        <div class="glass-card gamedev-card">
+          <div class="gamedev-card-icon">🚀</div>
+          <div class="gamedev-card-title">Game Engines</div>
+        </div>
+      </div>
+
+      <!-- Engine Exploration Banner -->
+      <div class="engines-spotlight">
+        <h3 class="engines-title"><i class="fas fa-layer-group"></i> Game Engine Exploration</h3>
+        <p class="engines-desc">
+          I am eager to explore and master industry-standard game engines and tools as I progress on my game development
+          journey:
+        </p>
+        <div class="engines-pills">
+          <span class="engine-pill"><i class="fab fa-unity"></i> Unity</span>
+          <span class="engine-pill"><i class="fas fa-cubes"></i> Unreal Engine</span>
+          <span class="engine-pill"><i class="fas fa-tools"></i> Modern Game-Dev Tools</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       8. MY LEARNING JOURNEY (PROGRESSION TIMELINE)
+       ========================================================================== -->
+  <section class="section" id="journey">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag"><i class="fas fa-stream"></i> Skill Tree</span>
+        <h2 class="section-title">My Learning Journey</h2>
+        <p class="section-subtitle">A gaming-style progression roadmap tracking my evolution as a developer.</p>
+      </div>
+
+      <div class="timeline">
+        <!-- Level 01 -->
+        <div class="timeline-item">
+          <div class="timeline-node"></div>
+          <div class="glass-card timeline-content">
+            <div class="timeline-level">LEVEL 01</div>
+            <h3 class="timeline-title">Programming Fundamentals</h3>
+          </div>
+        </div>
+
+        <!-- Level 02 -->
+        <div class="timeline-item">
+          <div class="timeline-node"></div>
+          <div class="glass-card timeline-content">
+            <div class="timeline-level">LEVEL 02</div>
+            <h3 class="timeline-title">Building Small Projects</h3>
+          </div>
+        </div>
+
+        <!-- Level 03 -->
+        <div class="timeline-item">
+          <div class="timeline-node"></div>
+          <div class="glass-card timeline-content">
+            <div class="timeline-level">LEVEL 03</div>
+            <h3 class="timeline-title">First Game Projects</h3>
+          </div>
+        </div>
+
+        <!-- Level 04 -->
+        <div class="timeline-item">
+          <div class="timeline-node"></div>
+          <div class="glass-card timeline-content">
+            <div class="timeline-level">LEVEL 04</div>
+            <h3 class="timeline-title">Learning Game Engines</h3>
+          </div>
+        </div>
+
+        <!-- Level 05 -->
+        <div class="timeline-item">
+          <div class="timeline-node"></div>
+          <div class="glass-card timeline-content">
+            <div class="timeline-level">LEVEL 05</div>
+            <h3 class="timeline-title">Creating Original Games</h3>
+          </div>
+        </div>
+
+        <!-- Level 06 -->
+        <div class="timeline-item">
+          <div class="timeline-node"></div>
+          <div class="glass-card timeline-content">
+            <div class="timeline-level">LEVEL 06</div>
+            <h3 class="timeline-title">Professional Game Developer</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       9. FUTURE GOALS SECTION
+       ========================================================================== -->
+  <section class="section" id="goals">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag"><i class="fas fa-flag-checkered"></i> Quest Log</span>
+        <h2 class="section-title">My Next Levels 🚀</h2>
+        <p class="section-subtitle">Milestones and objectives guiding my personal and technical growth.</p>
+      </div>
+
+      <div class="goals-grid">
+        <div class="glass-card goal-card">
+          <span class="goal-level-badge">Level 01</span>
+          <p class="goal-text">Strengthen my programming and problem-solving skills.</p>
+        </div>
+        <div class="glass-card goal-card">
+          <span class="goal-level-badge">Level 02</span>
+          <p class="goal-text">Learn professional game-development engines.</p>
+        </div>
+        <div class="glass-card goal-card">
+          <span class="goal-level-badge">Level 03</span>
+          <p class="goal-text">Build original 2D games.</p>
+        </div>
+        <div class="glass-card goal-card">
+          <span class="goal-level-badge">Level 04</span>
+          <p class="goal-text">Learn 3D game development.</p>
+        </div>
+        <div class="glass-card goal-card">
+          <span class="goal-level-badge">Level 05</span>
+          <p class="goal-text">Create and publish multiple games.</p>
+        </div>
+        <div class="glass-card goal-card">
+          <span class="goal-level-badge">Level 06</span>
+          <p class="goal-text">Build a strong game-development portfolio.</p>
+        </div>
+        <div class="glass-card goal-card" style="grid-column: 1 / -1;">
+          <span class="goal-level-badge">Level 07</span>
+          <p class="goal-text">Gain internship and industry experience.</p>
+        </div>
+      </div>
+
+      <!-- Final Goal Card -->
+      <div class="final-goal-card">
+        <h3 class="final-goal-header">
+          <i class="fas fa-trophy accent-purple"></i> FINAL GOAL
+        </h3>
+        <p class="final-goal-text">
+          Become a professional Game Developer and turn my passion for games into a career.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       10. EDUCATION & 11. GITHUB SECTIONS
+       ========================================================================== -->
+  <section class="section" id="education-github">
+    <div class="container">
+      <div class="edu-github-grid">
+        <!-- Education Card -->
+        <div class="glass-card edu-card">
+          <div class="edu-header">
+            <i class="fas fa-graduation-cap edu-icon"></i>
+            <div>
+              <h3 class="project-title">Education</h3>
+              <p class="section-subtitle" style="text-align: left; font-size: 0.9rem;">Academic Status</p>
+            </div>
+          </div>
+          <div class="edu-details">
+            <div class="edu-item">
+              <span class="edu-label">Status</span>
+              <span class="edu-value">Undergraduate Student</span>
+            </div>
+            <div class="edu-item">
+              <span class="edu-label">Course</span>
+              <span class="edu-value">BSc IT</span>
+            </div>
+            <div class="edu-item">
+              <span class="edu-label">College</span>
+              <span class="edu-value">Thakur college of scince and commerce</span>
+            </div>
+            <div class="edu-item">
+              <span class="edu-label">Year</span>
+              <span class="edu-value">2nd Year</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- GitHub Section Card -->
+        <div class="glass-card github-card">
+          <div class="github-header">
+            <i class="fab fa-github github-icon"></i>
+            <div>
+              <h3 class="project-title">Explore My Code</h3>
+              <p class="section-subtitle" style="text-align: left; font-size: 0.9rem;">Open Source Repository</p>
+            </div>
+          </div>
+          <p class="github-desc">
+            "My GitHub is where I document my learning journey, projects and experiments as I grow as a developer."
+          </p>
+          <a href="https://github.com/anishagupta8108-gif" target="_blank" rel="noopener" class="btn btn-primary">
+            Visit My GitHub <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       12. CONTACT SECTION
+       ========================================================================== -->
+  <section class="section" id="contact">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag"><i class="fas fa-comments"></i> Get In Touch</span>
+        <h2 class="section-title">Let's Create Something Awesome.</h2>
+        <p class="section-subtitle">Whether you're a fellow developer, student, creator or someone interested in
+          technology, I'd love to connect.</p>
+      </div>
+
+      <div class="contact-grid">
+        <!-- Contact Links Info -->
+        <div class="glass-card contact-info-card">
+          <p class="contact-intro">
+            Feel free to reach out for collaborations, project discussions, or tech chats!
+          </p>
+          <div class="contact-links">
+            <div class="contact-link-item">
+              <i class="fas fa-envelope contact-link-icon"></i>
+              <div class="contact-link-text">
+                <span class="contact-link-label">Email</span>
+                <span class="contact-link-val">
+                  <a href="mailto:anishgupta8108@gmail.com" class="contact-val">anishgupta8108@gmail.com</a></span>
+              </div>
+            </div>
+            <div class="contact-link-item">
+              <i class="fab fa-github contact-link-icon"></i>
+              <div class="contact-link-text">
+                <span class="contact-link-label">GitHub</span>
+                <span class="contact-link-val"><a
+                    href="https://github.com/anishagupta8108-gif">anishgupta8108-gif</a></span>
+              </div>
+            </div>
+            <div class="contact-link-item">
+              <i class="fab fa-linkedin contact-link-icon"></i>
+              <div class="contact-link-text">
+                <span class="contact-link-label">LinkedIn</span>
+                <span class="contact-link-val"><a href="https://www.linkedin.com/in/anisha-gupta-917268367/">Anisha
+                    Gupta</a></span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="glass-card contact-form-card">
+          <form id="contact-form">
+            <div class="form-group">
+              <label for="name" class="form-label">Name</label>
+              <input type="text" id="name" class="form-control" placeholder="Enter your name" required>
+            </div>
+            <div class="form-group">
+              <label for="email" class="form-label">Email</label>
+              <input type="email" id="email" class="form-control" placeholder="Enter your email address" required>
+            </div>
+            <div class="form-group">
+              <label for="message" class="form-label">Message</label>
+              <textarea id="message" class="form-control" placeholder="Type your message here..." required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary" style="width: 100%;">
+              <i class="fas fa-paper-plane"></i> Send Message
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       13. FOOTER
+       ========================================================================== -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <div class="footer-copy">
+        &copy; 2026 Anisha Gupta
+      </div>
+      <div class="footer-tagline">
+        Built with code, creativity & curiosity. 🎮
+      </div>
+      <div class="footer-socials">
+        <a href="YOUR_GITHUB_PROFILE" target="_blank" aria-label="GitHub Profile" class="social-icon-btn">
+          <i class="fab fa-github"></i>
+        </a>
+        <a href="YOUR_LINKEDIN_PROFILE" target="_blank" aria-label="LinkedIn Profile" class="social-icon-btn">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+        <a href="mailto:YOUR_EMAIL" aria-label="Email Anisha" class="social-icon-btn">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       INTERACTIVE MODALS (SNAKE GAME & QR CODE GENERATOR)
+       ========================================================================== -->
+
+  <!-- Snake Game Modal -->
+  <div class="modal-backdrop" id="snake-modal">
+    <div class="modal-container">
+      <button class="modal-close-btn" aria-label="Close Modal" title="Close Modal">&times;</button>
+      <h3 class="modal-title"><i class="fas fa-gamepad accent-purple"></i> Play Snake Game</h3>
+
+      <div class="game-controls-info">
+        <span>Use WASD or Arrow Keys</span>
+        <span class="game-score-display">Score: <span id="snake-score">0</span></span>
+      </div>
+
+      <canvas id="snake-canvas" width="400" height="400"></canvas>
+
+      <div style="display: flex; justify-content: space-between; align-items: center;">
+        <button class="btn btn-secondary btn-sm" id="snake-restart">
+          <i class="fas fa-redo"></i> Restart Game
+        </button>
+      </div>
+
+      <!-- Mobile D-Pad Touch Controls -->
+      <div class="dpad-container">
+        <div></div>
+        <button class="dpad-btn" data-dir="up" aria-label="Move Up" title="Move Up"><i
+            class="fas fa-chevron-up"></i></button>
+        <div></div>
+        <button class="dpad-btn" data-dir="left" aria-label="Move Left" title="Move Left"><i
+            class="fas fa-chevron-left"></i></button>
+        <button class="dpad-btn" data-dir="down" aria-label="Move Down" title="Move Down"><i
+            class="fas fa-chevron-down"></i></button>
+        <button class="dpad-btn" data-dir="right" aria-label="Move Right" title="Move Right"><i
+            class="fas fa-chevron-right"></i></button>
+      </div>
+    </div>
+  </div>
+
+  <!-- QR Code Generator Modal -->
+  <div class="modal-backdrop" id="qr-modal">
+    <div class="modal-container">
+      <button class="modal-close-btn" aria-label="Close Modal" title="Close Modal">&times;</button>
+      <h3 class="modal-title"><i class="fas fa-qrcode accent-blue"></i> QR Code Generator</h3>
+      <p style="color: var(--text-muted); margin-bottom: 1rem; font-size: 0.95rem;">
+        Enter any text or URL to generate a custom QR code instantly.
+      </p>
+
+      <div class="form-group">
+        <input type="text" id="qr-text-input" class="form-control" placeholder="https://github.com/anisha-gupta"
+          value="https://github.com">
+      </div>
+
+      <button class="btn btn-primary btn-sm" id="generate-qr-btn" style="width: 100%;">
+        <i class="fas fa-magic"></i> Generate QR Code
+      </button>
+
+      <div class="qr-output-box">
+        <img id="qr-code-img"
+          src="https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=https%3A%2F%2Fgithub.com&color=a855f7&bgcolor=ffffff"
+          alt="Generated QR Code">
+      </div>
+    </div>
+  </div>
+
+  <!-- Main JavaScript File -->
+  <script src="script.js"></script>
+</body>
+
+</html>
