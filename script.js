@@ -39,7 +39,7 @@ function initParticleCanvas() {
       vx: (Math.random() - 0.5) * 0.6,
       vy: (Math.random() - 0.5) * 0.6,
       radius: Math.random() * 2 + 1,
-      color: Math.random() > 0.5 ? 'rgba(168, 85, 247, ' : 'rgba(6, 182, 212, ',
+      color: Math.random() > 0.5 ? 'rgba(255, 235, 151, ' : 'rgba(240, 180, 41, ',
       alpha: Math.random() * 0.5 + 0.2
     });
   }
@@ -76,7 +76,7 @@ function initParticleCanvas() {
           ctx.beginPath();
           ctx.moveTo(p.x, p.y);
           ctx.lineTo(p2.x, p2.y);
-          ctx.strokeStyle = `rgba(168, 85, 247, ${0.15 * (1 - dist / 120)})`;
+          ctx.strokeStyle = `rgba(255, 235, 151, ${0.15 * (1 - dist / 120)})`;
           ctx.lineWidth = 0.5;
           ctx.stroke();
         }
@@ -261,16 +261,16 @@ function initSnakeGame() {
     ctx.fillRect(0, 0, canvas.width, canvas.height);
 
     // Render food
-    ctx.fillStyle = '#06b6d4';
+    ctx.fillStyle = '#f0b429';
     ctx.shadowBlur = 12;
-    ctx.shadowColor = '#06b6d4';
+    ctx.shadowColor = '#f0b429';
     ctx.fillRect(food.x * gridSize + 1, food.y * gridSize + 1, gridSize - 2, gridSize - 2);
 
     // Render snake
     for (let i = 0; i < snake.length; i++) {
-      ctx.fillStyle = i === 0 ? '#c084fc' : '#a855f7';
+      ctx.fillStyle = i === 0 ? '#ffeb97' : '#d9a21b';
       ctx.shadowBlur = i === 0 ? 15 : 5;
-      ctx.shadowColor = '#a855f7';
+      ctx.shadowColor = '#d9a21b';
       ctx.fillRect(snake[i].x * gridSize + 1, snake[i].y * gridSize + 1, gridSize - 2, gridSize - 2);
     }
   }
@@ -293,7 +293,7 @@ function initSnakeGame() {
     ctx.fillStyle = 'rgba(10, 7, 23, 0.85)';
     ctx.fillRect(0, 0, canvas.width, canvas.height);
     ctx.font = '20px Orbitron';
-    ctx.fillStyle = '#f43f5e';
+    ctx.fillStyle = '#f59e0b';
     ctx.textAlign = 'center';
     ctx.fillText('GAME OVER', canvas.width / 2, canvas.height / 2 - 10);
     ctx.font = '14px Outfit';
@@ -356,7 +356,7 @@ function initQrGenerator() {
     qrBtn.addEventListener('click', () => {
       const val = qrInput.value.trim() || 'https://github.com';
       const encoded = encodeURIComponent(val);
-      qrImg.src = `https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=${encoded}&color=a855f7&bgcolor=ffffff`;
+      qrImg.src = `https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=${encoded}&color=ffeb97&bgcolor=ffffff`;
       showToast('QR Code Generated Successfully! 📱');
     });
   }
@@ -371,18 +371,44 @@ function initContactForm() {
 
   form.addEventListener('submit', (e) => {
     e.preventDefault();
+
+    const nameInput = form.querySelector('#name');
+    const emailInput = form.querySelector('#email');
+    const messageInput = form.querySelector('#message');
     const btn = form.querySelector('button[type="submit"]');
-    const originalText = btn.innerHTML;
+
+    const name = nameInput ? nameInput.value.trim() : '';
+    const email = emailInput ? emailInput.value.trim() : '';
+    const message = messageInput ? messageInput.value.trim() : '';
+
+    if (!name || !email || !message) {
+      showToast('Please fill in all fields before sending. ⚠️');
+      return;
+    }
+
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+      showToast('Please enter a valid email address. ⚠️');
+      return;
+    }
 
     btn.disabled = true;
-    btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> TRANSMITTING...';
+    const originalText = btn.innerHTML;
+    btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> SENDING...';
+
+    const subject = encodeURIComponent(`Portfolio Contact - ${name}`);
+    const body = encodeURIComponent(
+      `Hi Anisha,\n\nYou have a new message from your portfolio contact form:\n\nName: ${name}\nEmail: ${email}\n\nMessage:\n${message}\n\n---\nSent via Anisha Gupta Portfolio`
+    );
+    const mailtoUrl = `mailto:anishgupta8108@gmail.com?subject=${subject}&body=${body}`;
 
     setTimeout(() => {
+      window.open(mailtoUrl, '_blank');
       btn.disabled = false;
       btn.innerHTML = originalText;
       form.reset();
-      showToast('Message sent! Anisha will get back to you soon. 🚀');
-    }, 1200);
+      showToast('Message opened in your email client! 🚀');
+    }, 1000);
   });
 }
 
