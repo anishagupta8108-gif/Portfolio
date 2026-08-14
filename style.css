@@ -1473,6 +1473,19 @@ textarea.form-control {
 /* ==========================================================================
    RESPONSIVE DESIGN (MOBILE & TABLET BREAKPOINTS)
    ========================================================================== */
+
+/* --- Large Screens (1400px+) --- */
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1320px;
+  }
+
+  .hero-title {
+    font-size: 4.5rem;
+  }
+}
+
+/* --- Tablet Landscape / Small Desktop (max 992px) --- */
 @media (max-width: 992px) {
 
   .hero-grid,
@@ -1480,7 +1493,7 @@ textarea.form-control {
   .contact-grid,
   .edu-github-grid {
     grid-template-columns: 1fr;
-    gap: 2.5rem;
+    gap: 2rem;
   }
 
   .hero-visual {
@@ -1490,6 +1503,23 @@ textarea.form-control {
 
   .hero-img-wrapper {
     max-width: 380px;
+    margin: 0 auto;
+  }
+
+  .about-stats-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .section {
+    padding: 4.5rem 0;
+  }
+
+  .section-header {
+    margin-bottom: 3rem;
+  }
+
+  .gamedev-hero-box {
+    padding: 2rem;
   }
 
   .timeline::before {
@@ -1501,13 +1531,19 @@ textarea.form-control {
     padding-left: 3.5rem !important;
     padding-right: 0 !important;
     text-align: left !important;
+    left: 0 !important;
   }
 
   .timeline-node {
     left: 10px !important;
   }
+
+  .projects-grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
 }
 
+/* --- Tablet Portrait (max 768px) --- */
 @media (max-width: 768px) {
   .nav-links {
     position: fixed;
@@ -1535,6 +1571,14 @@ textarea.form-control {
     display: block;
   }
 
+  .section {
+    padding: 4rem 0;
+  }
+
+  .container {
+    padding: 0 1.25rem;
+  }
+
   .hero-buttons {
     flex-direction: column;
     width: 100%;
@@ -1542,13 +1586,210 @@ textarea.form-control {
 
   .btn {
     width: 100%;
+    justify-content: center;
   }
 
   .about-stats-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .about-content-card,
+  .contact-info-card,
+  .contact-form-card,
+  .edu-card,
+  .github-card {
+    padding: 1.75rem;
   }
 
   .floating-badge {
     display: none;
   }
+
+  .skills-grid {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .goals-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .final-goal-card {
+    padding: 1.75rem;
+  }
+
+  .modal-container {
+    padding: 1.5rem;
+    max-width: 100%;
+  }
+
+  .toast-notification {
+    left: 1rem;
+    right: 1rem;
+    bottom: 1rem;
+    font-size: 0.85rem;
+  }
+
+  .footer-socials {
+    gap: 0.85rem;
+  }
+}
+
+/* --- Mobile (max 480px) --- */
+@media (max-width: 480px) {
+  :root {
+    --nav-height: 68px;
+    --border-radius: 12px;
+  }
+
+  .section {
+    padding: 3rem 0;
+  }
+
+  .container {
+    padding: 0 1rem;
+  }
+
+  .section-header {
+    margin-bottom: 2rem;
+  }
+
+  .section-subtitle {
+    font-size: 1rem;
+  }
+
+  .hero-section {
+    padding-top: calc(var(--nav-height) + 2rem);
+    padding-bottom: 3rem;
+  }
+
+  .hero-img-wrapper {
+    max-width: 280px;
+  }
+
+  .hero-intro {
+    font-size: 1rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.1rem;
+  }
+
+  .about-stats-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+
+  .stat-card {
+    padding: 1.25rem 1rem;
+  }
+
+  .stat-number {
+    font-size: 1.75rem;
+  }
+
+  .about-content-card,
+  .contact-info-card,
+  .contact-form-card,
+  .edu-card,
+  .github-card {
+    padding: 1.25rem;
+  }
+
+  .about-quote-box {
+    font-size: 1rem;
+    padding: 1.1rem;
+  }
+
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .project-header,
+  .project-body {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+
+  .project-footer {
+    padding: 1rem 1.25rem;
+    flex-wrap: wrap;
+  }
+
+  .gamedev-hero-box {
+    padding: 1.5rem;
+  }
+
+  .gamedev-intro-text {
+    font-size: 1rem;
+  }
+
+  .engines-spotlight {
+    padding: 1.5rem 1rem;
+  }
+
+  .engine-pill {
+    font-size: 0.85rem;
+    padding: 0.5rem 1rem;
+  }
+
+  .goals-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .final-goal-card {
+    padding: 1.5rem 1.25rem;
+  }
+
+  .final-goal-text {
+    font-size: 1.05rem;
+  }
+
+  .modal-container {
+    padding: 1.25rem;
+    border-radius: 14px;
+  }
+
+  #snake-canvas {
+    width: 260px !important;
+    height: 260px !important;
+  }
+
+  .dpad-container {
+    grid-template-columns: repeat(3, 42px);
+    grid-template-rows: repeat(2, 42px);
+  }
+
+  .contact-link-item {
+    padding: 0.85rem;
+  }
+
+  .footer {
+    padding: 2rem 0;
+  }
+
+  .toast-notification {
+    left: 0.75rem;
+    right: 0.75rem;
+    bottom: 0.75rem;
+    padding: 0.85rem 1rem;
+  }
+  @media (max-width: 992px) {
+  
+  .timeline-item {
+    width: 100%;
+    padding-left: 3.5rem !important;
+    padding-right: 0 !important;
+    text-align: left !important;
+    left: 0 !important; /* Add this */
+  }
+  
+}
 }
